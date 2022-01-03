@@ -6,7 +6,7 @@ function ktsnt(n) {
     }
     return true;
 }
-
+var result = " ";
 function songuyento() {
     var n = document.getElementById("n").value * 1;
     if (n < 2) {
@@ -14,8 +14,11 @@ function songuyento() {
     } else {
         for (var i = 2; i <= n; i++) {
             if (ktsnt(i) == true) {
-                sum.innerText = "Số nguyên tố gần " + n + " nhất là " + i;
+                result += i + " ";
             }
         }
     }
+    var resultel = document.getElementById("bai5result");
+    resultel.innerHTML =
+        "<div>Dãy số nguyên tố gần " + n + " nhất là: " + result + "</div>";
 }
